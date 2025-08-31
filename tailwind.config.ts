@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'code': ['Fira Code', 'monospace'],
+				'orbitron': ['Orbitron', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -84,11 +88,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'matrix-rain': {
+					'0%': { transform: 'translateY(-100%)' },
+					'100%': { transform: 'translateY(100vh)' }
+				},
+				'typewriter': {
+					'0%': { width: '0' },
+					'100%': { width: '100%' }
+				},
+				'pulse-green': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
+				},
+				'glow': {
+					'0%, 100%': { boxShadow: '0 0 5px #00FF00' },
+					'50%': { boxShadow: '0 0 20px #00FF00, 0 0 30px #00FF00' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'matrix-rain': 'matrix-rain 3s linear infinite',
+				'typewriter': 'typewriter 3s steps(30) infinite',
+				'pulse-green': 'pulse-green 2s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite alternate'
 			}
 		}
 	},
